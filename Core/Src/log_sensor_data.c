@@ -105,3 +105,180 @@ LogStatus create_data_file_header(void)
 
     return LOG_OK;
 }
+
+
+
+
+
+
+// Log sensor data to SD card
+LogStatus log_sensor_data(SensorData *data)
+{
+    // Open file in append mode
+    fresult = f_open(&fil, DATA_FILENAME, FA_OPEN_ALWAYS | FA_WRITE);
+
+    if (fresult != FR_OK) {
+        send_uart_message("Error opening data file\r\n");
+        return LOG_FILE_OPEN_ERROR;
+    }
+
+    // Move to end of file for appending
+    fresult = f_lseek(&fil, f_size(&fil));
+    if (fresult != FR_OK) {
+        f_close(&fil);
+        return LOG_FILE_WRITE_ERROR;
+    }
+
+    // Format sensor data as CSV
+    sprintf(sensor_data_buffer, "%lu,%.2f,%.2f,%.2f\r\n",
+            data->timestamp, data->temperature, data->humidity, data->pressure);
+
+    // Write data to file
+    fresult = f_write(&fil, sensor_data_buffer, strlen(sensor_data_buffer), &bytes_written);
+
+    if (fresult != FR_OK) {
+        f_close(&fil);
+        send_uart_message("Error writing to SD card\r\n");
+        return LOG_FILE_WRITE_ERROR;
+    }
+
+    // Close file
+    f_close(&fil);
+
+    send_uart_message("Data logged to SD card successfully\r\n");
+    return LOG_OK;
+}
+
+
+// Display last N entries from log file
+LogStatus display_last_entries(uint8_t num_entries)
+{
+    char line[256];
+    uint32_t file_size;
+    uint32_t line_count = 0;
+
+    // Open file for reading
+    fresult = f_open(&fil, DATA_FILENAME, FA_READ);
+
+    if (fresult != FR_OK) {
+        send_uart_message("Error reading data file\r\n");
+        return LOG_FILE_READ_ERROR;
+    }
+
+    file_size = f_size(&fil);
+
+    // Read file line by line to count total lines
+    while (f_gets(line, sizeof(line), &fil)) {
+        line_count++;
+    }
+
+    // Go back to beginning
+    f_lseek(&fil, 0);
+
+    // Skip header and older entries
+    uint32_t skip_lines = (line_count > num_entries + 1) ? (line_count - num_entries) : 1;
+
+    for (uint32_t i = 0; i < skip_lines; i++) {
+        f_gets(line, sizeof(line), &fil);
+    }
+
+    // Display remaining entries
+    send_uart_message("Last sensor readings:\r\n");
+    while (f_gets(line, sizeof(line), &fil)) {
+        send_uart_message(line);
+    }
+
+    f_close(&fil);
+    return LOG_OK;
+}
+
+// Clear all logged data
+LogStatus clear_log_file(void)
+{
+    // Delete existing file
+    fresult = f_unlink(DATA_FILENAME);
+
+    if (fresult != FR_OK) {
+        send_uart_message("Error clearing log file\r\n");
+        return LOG_FILE_OPEN_ERROR;
+    }
+
+    send_uart_message("Log file cleared successfully\r\n");
+
+    // Recreate file with header
+    if (create_data_file_header() != LOG_OK) {
+        return LOG_FILE_CREATE_ERROR;
+    }
+
+    return LOG_OK;
+}
+
+// Check SD card status
+LogStatus check_sd_card_status(void)
+{
+    // Try to open a test file
+    fresult = f_open(&fil, "test.tmp", FA_CREATE_ALWAYS | FA_WRITE);
+
+    if (fresult != FR_OK) {
+        return LOG_SD_MOUNT_ERROR;
+    }
+
+    f_close(&fil);
+    f_unlink("test.tmp");
+
+    return LOG_OK;
+}
+
+// File operation helpers
+LogStatus open_data_file_append(void)
+{
+    fresult = f_open(&fil, DATA_FILENAME, FA_OPEN_ALWAYS | FA_WRITE);
+    if (fresult != FR_OK) {
+        return LOG_FILE_OPEN_ERROR;
+    }
+
+    // Move to end of file
+    fresult = f_lseek(&fil, f_size(&fil));
+    if (fresult != FR_OK) {
+        f_close(&fil);
+        return LOG_FILE_WRITE_ERROR;
+    }
+
+    return LOG_OK;
+}
+
+LogStatus open_data_file_read(void)
+{
+    fresult = f_open(&fil, DATA_FILENAME, FA_READ);
+    if (fresult != FR_OK) {
+        return LOG_FILE_READ_ERROR;
+    }
+
+    return LOG_OK;
+}
+
+LogStatus close_data_file(void)
+{
+    fresult = f_close(&fil);
+    if (fresult != FR_OK) {
+        return LOG_FILE_WRITE_ERROR;
+    }
+
+    return LOG_OK;
+}
+
+// Utility functions
+void send_uart_message(const char *message)
+{
+    HAL_UART_Transmit(&huart1, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
+}
+
+void clear_log_buffer(void)
+{
+    memset(log_buffer, 0, sizeof(log_buffer));
+}
+
+uint32_t get_buffer_size(const char *buf)
+{
+    return strlen(buf);
+}
