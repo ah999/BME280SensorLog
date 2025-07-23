@@ -23,7 +23,7 @@ LogStatus log_sensor_init(SD_Card_Logger *logger, UART_HandleTypeDef *uart_handl
     HAL_Delay(500);
 
     // Mount SD card
-    FRESULT fresult = f_mount(&logger->fs, "/", 1);
+    fresult = f_mount(&logger->fs, "/", 1);
     if (fresult != FR_OK) {
         send_uart_message(logger, "ERROR!!! in mounting SD CARD...\r\n");
         return LOG_SD_MOUNT_ERROR;

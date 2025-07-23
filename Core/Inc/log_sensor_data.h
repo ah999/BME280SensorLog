@@ -7,6 +7,15 @@
 #include "stdio.h"
 #include "stm32f4xx_hal.h"
 
+
+
+// Configuration defines
+#define LOG_BUFFER_SIZE         1024
+#define UART_BUFFER_SIZE        256
+#define SENSOR_DATA_BUFFER_SIZE 256
+#define DATA_FILENAME          "sensor_data.csv"
+#define LOG_INTERVAL_MS        5000
+
 // Data logging status
 typedef enum {
     LOG_OK = 0,
@@ -51,14 +60,8 @@ typedef struct {
     uint32_t timestamp;
 } SensorData;
 
-// Configuration defines
-#define LOG_BUFFER_SIZE         1024
-#define UART_BUFFER_SIZE        256
-#define SENSOR_DATA_BUFFER_SIZE 256
-#define DATA_FILENAME          "sensor_data.csv"
-#define LOG_INTERVAL_MS        5000
 
-/ Function declarations
+// Function declarations
 LogStatus log_sensor_init(SD_Card_Logger *logger, UART_HandleTypeDef *uart_handle);
 LogStatus get_sd_card_info(SD_Card_Logger *logger);
 LogStatus create_data_file_header(SD_Card_Logger *logger);

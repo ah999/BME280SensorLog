@@ -43,3 +43,7 @@
 89	3682	7749955153992867	CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj	5623455903b4ce09
 149	4138	7749955159015254	cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj	aaddd5b20287165e
 4138	5135	7749955168294036	BME280SensorLog.elf	cce2b3e250b5e1dc
+18	1917	7749993592595593	CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj	285e3bf45b1db8b
+13	1062	7749996072246516	CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj	285e3bf45b1db8b
+14	1014	7749998318406863	CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj	285e3bf45b1db8b
+13	1040	7749999050031074	CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj	285e3bf45b1db8b

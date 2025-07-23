@@ -44,29 +44,6 @@
  *         Check datasheet page no 18 and page no 30
  */
 
-// Function prototypes
-int BME280_Init(BME280_Data *bme, I2C_HandleTypeDef *i2c_handle, uint8_t address);
-
-int BME280_Config(BME280_Data *bme, uint8_t osrs_t, uint8_t osrs_p, uint8_t osrs_h, 
-                  uint8_t mode, uint8_t t_sb, uint8_t filter);
-
-
-// Read the Trimming parameters saved in the NVM ROM of the device
-void TrimRead(BME280_Data *bme);
-
-/* To be used when doing the force measurement
- * the Device need to be put in forced mode every time the measurement is needed
- */
-void BME280_WakeUP(BME280_Data *bme);
-
-//read the raw data
-BMEReadRaw(BME280_Data *bme);
-
-/* measure the temp, pressure and humidity
- * the values will be stored in the parameters passed to the function
- */
-void BME280_Measure (BME280_Data *bme);
-
 // BME280 Data Structure
 typedef struct {
     I2C_HandleTypeDef *i2c_handle;
@@ -86,6 +63,31 @@ typedef struct {
     // Compensated sensor readings
     float Temperature, Pressure, Humidity;
 } BME280_Data;
+
+
+// Function prototypes
+int BME280_Init(BME280_Data *bme, I2C_HandleTypeDef *i2c_handle, uint8_t address);
+
+int BME280_Config(BME280_Data *bme, uint8_t osrs_t, uint8_t osrs_p, uint8_t osrs_h, 
+                  uint8_t mode, uint8_t t_sb, uint8_t filter);
+
+
+// Read the Trimming parameters saved in the NVM ROM of the device
+void TrimRead(BME280_Data *bme);
+
+/* To be used when doing the force measurement
+ * the Device need to be put in forced mode every time the measurement is needed
+ */
+void BME280_WakeUP(BME280_Data *bme);
+
+//read the raw data
+int BMEReadRaw(BME280_Data *bme);
+
+/* measure the temp, pressure and humidity
+ * the values will be stored in the parameters passed to the function
+ */
+void BME280_Measure (BME280_Data *bme);
+
 
 
 // Oversampling definitions

@@ -22,17 +22,20 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "BME280_STM32.h"
+#include "fatfs_sd.h"
+#include "string.h"
+#include "stdio.h"
+#include "log_sensor_data.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define BME280_I2C_ADDRESS 0xEC  // SDIO is grounded, the 7 bit address is 0x76 and 8 bit address = 0x76<<1 = 0xEC
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -50,6 +53,13 @@ SPI_HandleTypeDef hspi1;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
+
+SensorData current_data;  // Current sensor data to log
+//char uart_display_buffer[256];
+//uint32_t measurement_counter = 0;
+LogStatus log_status;  // Status of the logging system
+SD_Card_Logger sd_logger;  // SD card logger instance
+BME280_Data bme1;  // BME280 data structure
 
 
 
@@ -110,6 +120,32 @@ int main(void)
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  // Initialize SD card logging system
+  
+  
+// Welcome message
+    send_uart_message(&sd_logger, "\r\n=== BME280 SD Card Data Logger ===\r\n");
+    send_uart_message(&sd_logger, "Initializing system...\r\n");
+
+    // Initialize BME280 sensor
+    
+    BME280_Init(&bme1, &hi2c1, BME280_I2C_ADDRESS);
+    BME280_Config(&bme1, OSRS_2, OSRS_16, OSRS_1, MODE_NORMAL, T_SB_0p5, IIR_16);
+    send_uart_message(&sd_logger, "BME280 sensor initialized successfully\r\n");
+
+    // Wait for system stabilization
+    HAL_Delay(1000);
+
+  log_status = log_sensor_init(&sd_logger, &huart1);
+  if (log_status != LOG_OK) {
+     //handle_logging_error(log_status);
+     send_uart_message(&sd_logger, "SD card logging failed to initialize!\r\n");
+     send_uart_message(&sd_logger, "Continuing with UART output only...\r\n");
+   }
+
+    send_uart_message(&sd_logger, "System ready. Starting data logging...\r\n");
+    send_uart_message(&sd_logger, "Data format: Temperature(C), Humidity(%), Pressure(hPa)\r\n\r\n");
+
   
   /* USER CODE END 2 */
 
@@ -120,7 +156,22 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  
+	   // Read data from the BME280 sensor
+      BME280_Measure(&bme1);
+
+      // Populate the data structure for logging
+        
+      current_data.timestamp = HAL_GetTick();
+      current_data.temperature = bme1.Temperature;
+      current_data.humidity = bme1.Humidity;
+      current_data.pressure = bme1.Pressure;
+      //current_sensor_data.timestamp = measurement_counter++;
+
+      // Log the data to the SD card
+      if (log_status == LOG_OK) {
+        log_sensor_data(&sd_logger, &current_data);
+       }
+
   }
   /* USER CODE END 3 */
 }
