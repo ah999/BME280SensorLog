@@ -28,6 +28,9 @@ extern I2C_HandleTypeDef hi2c1;
 
 #define BME280_ADDRESS 0xEC  // SDIO is grounded, the 7 bit address is 0x76 and 8 bit address = 0x76<<1 = 0xEC
 
+
+extern float Temperature, Pressure, Humidity;
+
 uint8_t chipID;
 
 uint8_t TrimParam[36];
@@ -201,4 +204,3 @@ void BME280_WakeUP(void)
 
 	HAL_Delay (100);
 }
-
