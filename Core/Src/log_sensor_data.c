@@ -69,3 +69,39 @@ LogStatus get_sd_card_info(void)
     return LOG_OK;
 }
 
+// Create CSV header if file doesn't exist
+LogStatus create_data_file_header(void)
+{
+    // Check if data file exists
+    fresult = f_open(&fil, DATA_FILENAME, FA_READ);
+
+    if (fresult == FR_NO_FILE) {
+        // File doesn't exist, create it with header
+        fresult = f_open(&fil, DATA_FILENAME, FA_CREATE_NEW | FA_WRITE);
+        if (fresult != FR_OK) {
+            return LOG_FILE_CREATE_ERROR;
+        }
+
+        // Write CSV header
+        strcpy(log_buffer, "Timestamp,Temperature(C),Humidity(%),Pressure(hPa)\r\n");
+        fresult = f_write(&fil, log_buffer, strlen(log_buffer), &bytes_written);
+
+        if (fresult != FR_OK) {
+            f_close(&fil);
+            return LOG_FILE_WRITE_ERROR;
+        }
+
+        f_close(&fil);
+        send_uart_message("New data file created with header\r\n");
+    }
+    else if (fresult == FR_OK) {
+        // File exists, just close it
+        f_close(&fil);
+        send_uart_message("Existing data file found\r\n");
+    }
+    else {
+        return LOG_FILE_OPEN_ERROR;
+    }
+
+    return LOG_OK;
+}
