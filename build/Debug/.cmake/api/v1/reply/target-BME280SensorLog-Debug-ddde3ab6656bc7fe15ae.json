@@ -36,13 +36,13 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 101,
+				"line" : 102,
 				"parent" : 2
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 95,
+				"line" : 96,
 				"parent" : 2
 			}
 		]
@@ -273,7 +273,8 @@
 				28,
 				29,
 				30,
-				31
+				31,
+				32
 			]
 		}
 	],
@@ -469,6 +470,12 @@
 			"backtrace" : 3,
 			"isGenerated" : true,
 			"path" : "build/Debug/cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 3,
+			"isGenerated" : true,
+			"path" : "build/Debug/cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj",
 			"sourceGroupIndex" : 2
 		}
 	],

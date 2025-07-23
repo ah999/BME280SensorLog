@@ -42,6 +42,8 @@ C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.
                               C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o) (__udivmoddi4)
 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
                               C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o) (__aeabi_ldiv0)
+C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+                              cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj (malloc)
 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
                               CMakeFiles/BME280SensorLog.dir/Core/Src/sysmem.c.obj (__errno)
 
@@ -3271,19 +3273,28 @@ Discarded input sections
                 0x00000000       0x3e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.st_clust
                 0x00000000       0x40 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .rodata.LfnOfs
+                0x00000000        0xd cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .text.cmp_lfn  0x00000000       0xe0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .text.pick_lfn
+                0x00000000       0xc8 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .text.put_lfn  0x00000000       0xd0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .text.gen_numname
+                0x00000000      0x11c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .text.sum_sfn  0x00000000       0x42 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.dir_read
-                0x00000000       0xba cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000      0x14e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.dir_find
-                0x00000000       0xaa cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000      0x180 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.dir_register
-                0x00000000       0x64 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000      0x1f0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.dir_remove
-                0x00000000       0x3c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000       0x94 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.get_fileinfo
-                0x00000000       0xc0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
- .rodata        0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000      0x1bc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .rodata        0x00000000       0x48 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.create_name
-                0x00000000      0x128 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000      0x370 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.follow_path
                 0x00000000       0xe2 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.get_ldnumber
@@ -3295,28 +3306,32 @@ Discarded input sections
  .text.validate
                 0x00000000       0x6a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_mount  0x00000000       0x8c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
- .text.f_open   0x00000000      0x374 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .text.f_open   0x00000000      0x394 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_read   0x00000000      0x27e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_write  0x00000000      0x2ea cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_sync   0x00000000       0xfc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_close  0x00000000       0x54 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_lseek  0x00000000      0x412 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_opendir
-                0x00000000       0xe6 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000      0x106 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_closedir
                 0x00000000       0x4c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_readdir
-                0x00000000       0x7a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
- .text.f_stat   0x00000000       0x72 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000       0x9a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .text.f_stat   0x00000000       0x92 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_getfree
                 0x00000000      0x16a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_truncate
                 0x00000000      0x128 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_unlink
-                0x00000000      0x156 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
- .text.f_mkdir  0x00000000      0x20e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000      0x176 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .text.f_mkdir  0x00000000      0x22e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_rename
-                0x00000000      0x1f2 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000      0x21a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .text.f_getlabel
+                0x00000000      0x134 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .text.f_setlabel
+                0x00000000      0x218 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_mkfs   0x00000000      0x858 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_gets   0x00000000       0x7c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.putc_bfd
@@ -3329,16 +3344,18 @@ Discarded input sections
  .text.f_puts   0x00000000       0x48 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .text.f_printf
                 0x00000000      0x43c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .rodata.badchr.2
+                0x00000000       0x10 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .rodata.cst32.1
                 0x00000000        0xe cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .rodata.cst.0  0x00000000        0xe cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
- .debug_info    0x00000000     0x21dd cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
- .debug_abbrev  0x00000000      0x282 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .debug_info    0x00000000     0x27bc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .debug_abbrev  0x00000000      0x29f cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .debug_aranges
-                0x00000000      0x208 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000      0x240 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .debug_rnglists
-                0x00000000      0x1a2 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
- .debug_macro   0x00000000      0x70a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+                0x00000000      0x1d6 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .debug_macro   0x00000000      0x711 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .debug_macro   0x00000000      0xad8 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .debug_macro   0x00000000      0x2a7 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .debug_macro   0x00000000       0x2e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
@@ -3403,10 +3420,10 @@ Discarded input sections
  .debug_macro   0x00000000       0xe2 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .debug_macro   0x00000000       0x8e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .debug_macro   0x00000000       0x58 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
- .debug_line    0x00000000     0x354f cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
- .debug_str     0x00000000    0xd8b6e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .debug_line    0x00000000     0x3f47 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .debug_str     0x00000000    0xd8ccc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
- .debug_frame   0x00000000      0x94c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
+ .debug_frame   0x00000000      0xa58 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .ARM.attributes
                 0x00000000       0x34 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
  .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
@@ -3476,12 +3493,24 @@ Discarded input sections
  .text          0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
  .data          0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
  .bss           0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .bss.disk      0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .text.FATFS_LinkDriverEx
+                0x00000000       0x98 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .text.FATFS_LinkDriver
+                0x00000000       0x1e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
  .text.FATFS_UnLinkDriverEx
                 0x00000000       0x70 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
  .text.FATFS_UnLinkDriver
                 0x00000000       0x1a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
  .text.FATFS_GetAttachedDriversNbr
                 0x00000000       0x18 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .debug_info    0x00000000      0x37f cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .debug_abbrev  0x00000000      0x19f cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .debug_aranges
+                0x00000000       0x40 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .debug_rnglists
+                0x00000000       0x2c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .debug_macro   0x00000000      0x303 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
  .debug_macro   0x00000000      0xad8 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
  .debug_macro   0x00000000       0x16 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
  .debug_macro   0x00000000       0x7c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
@@ -3546,6 +3575,12 @@ Discarded input sections
  .debug_macro   0x00000000       0x29 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
  .debug_macro   0x00000000       0x12 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
  .debug_macro   0x00000000       0xe2 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .debug_line    0x00000000      0x8f7 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .debug_str     0x00000000    0xd795c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .debug_frame   0x00000000       0xc8 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+ .ARM.attributes
+                0x00000000       0x34 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
  .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
  .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
  .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
@@ -3611,10 +3646,16 @@ Discarded input sections
  .text          0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
  .data          0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
  .bss           0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
- .debug_info    0x00000000       0x77 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
- .debug_abbrev  0x00000000       0x28 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
- .debug_aranges
+ .text.ff_memalloc
                 0x00000000       0x18 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
+ .text.ff_memfree
+                0x00000000       0x16 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
+ .debug_info    0x00000000      0x10b cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
+ .debug_abbrev  0x00000000       0xbd cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
+ .debug_aranges
+                0x00000000       0x28 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
+ .debug_rnglists
+                0x00000000       0x19 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
  .debug_macro   0x00000000      0x2eb cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
  .debug_macro   0x00000000      0xad8 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
  .debug_macro   0x00000000      0x2a7 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
@@ -3678,11 +3719,161 @@ Discarded input sections
  .debug_macro   0x00000000       0x29 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
  .debug_macro   0x00000000       0x12 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
  .debug_macro   0x00000000       0xe2 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
- .debug_line    0x00000000      0x85b cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
- .debug_str     0x00000000    0xd76ab cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
+ .debug_line    0x00000000      0x88b cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
+ .debug_str     0x00000000    0xd76e7 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
  .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
+ .debug_frame   0x00000000       0x58 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
  .ARM.attributes
                 0x00000000       0x34 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .text          0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .data          0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .bss           0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .rodata.Tbl    0x00000000      0x100 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .text.ff_convert
+                0x00000000       0x78 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .text.ff_wtoupper
+                0x00000000      0x114 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .rodata.cvt1.1
+                0x00000000      0x1f2 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .rodata.cvt2.0
+                0x00000000       0xbc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_info    0x00000000      0x1b9 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_abbrev  0x00000000       0xde cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_aranges
+                0x00000000       0x28 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_rnglists
+                0x00000000       0x1a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x2f1 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0xad8 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x2a7 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x2e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x28 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x22 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x8e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x51 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x103 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x6a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x1df cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x1c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x22 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0xfb cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000     0x1011 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x11f cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000    0x17ff1 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x6d cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000     0x370a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x190 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x5c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0xcba cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x9e9 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x115 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x156 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0xa5 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x182 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x287 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x5f cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x236 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x132 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x41d cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x2e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x1b5 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x22 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0xd6 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x127 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0xe2 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x89 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x30c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x44b cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0xeb cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x225 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x2aa cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x134 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0xe5 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x2a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x74 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x3c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x34 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x16 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x3c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x370 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x16 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x4a cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x34 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x10 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x58 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000      0x1e5 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x16 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x29 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0x12 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_macro   0x00000000       0xe2 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_line    0x00000000      0x964 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_str     0x00000000    0xd76e0 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .debug_frame   0x00000000       0x60 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
+ .ARM.attributes
+                0x00000000       0x34 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
  .group         0x00000000        0xc CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .group         0x00000000        0xc CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .group         0x00000000        0xc CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
@@ -3749,11 +3940,22 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .data          0x00000000        0x0 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .bss           0x00000000        0x0 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .bss.retUSER   0x00000000        0x1 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .bss.USERPath  0x00000000        0x4 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .bss.USERFatFS
-                0x00000000      0x230 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+                0x00000000      0x234 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .bss.USERFile  0x00000000      0x230 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .text.MX_FATFS_Init
+                0x00000000       0x24 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .text.get_fattime
                 0x00000000       0x10 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .debug_info    0x00000000      0x4fb CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .debug_abbrev  0x00000000      0x15e CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .debug_aranges
+                0x00000000       0x28 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .debug_rnglists
+                0x00000000       0x19 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .debug_macro   0x00000000      0x316 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .debug_macro   0x00000000      0xad8 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .debug_macro   0x00000000      0x2a7 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
@@ -3817,6 +4019,13 @@ Discarded input sections
  .debug_macro   0x00000000       0x12 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .debug_macro   0x00000000       0xe2 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
  .debug_macro   0x00000000       0x8e CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .debug_line    0x00000000      0x89d CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .debug_str     0x00000000    0xd7a09 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .comment       0x00000000       0x44 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .debug_frame   0x00000000       0x4c CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+ .group         0x00000000        0xc CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .group         0x00000000        0xc CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .group         0x00000000        0xc CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .group         0x00000000        0xc CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
@@ -3886,12 +4095,35 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .data          0x00000000        0x0 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .bss           0x00000000        0x0 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .data.Stat     0x00000000        0x1 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .data.USER_Driver
+                0x00000000       0x14 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .text.USER_initialize
+                0x00000000       0x28 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .text.USER_status
+                0x00000000       0x1c CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .text.USER_read
+                0x00000000       0x26 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .text.USER_write
+                0x00000000       0x26 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .text.USER_ioctl
+                0x00000000       0x26 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_info    0x00000000      0x391 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_abbrev  0x00000000      0x144 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_aranges
+                0x00000000       0x40 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_rnglists
+                0x00000000       0x2b CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_macro   0x00000000      0x33c CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000      0xad8 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x22 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_macro   0x00000000       0x6e CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x2a CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_macro   0x00000000       0x94 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x3c CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x34 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000      0x190 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_macro   0x00000000       0x57 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000      0x370 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x4a CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
@@ -3899,7 +4131,9 @@ Discarded input sections
  .debug_macro   0x00000000       0x10 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x58 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000      0x1e5 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_macro   0x00000000       0x10 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x3c CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_macro   0x00000000       0x20 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x7c CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000      0x2a7 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
@@ -3916,6 +4150,7 @@ Discarded input sections
  .debug_macro   0x00000000    0x17ff1 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x6d CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000     0x370a CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_macro   0x00000000       0x56 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000      0xcba CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000      0x9e9 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000      0x115 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
@@ -3946,6 +4181,13 @@ Discarded input sections
  .debug_macro   0x00000000       0x29 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0x12 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .debug_macro   0x00000000       0xe2 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_macro   0x00000000       0x88 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_line    0x00000000      0x8d1 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_str     0x00000000    0xd7af6 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .comment       0x00000000       0x44 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .debug_frame   0x00000000       0xc8 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+ .ARM.attributes
+                0x00000000       0x34 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .group         0x00000000        0xc CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
@@ -4466,6 +4708,25 @@ Discarded input sections
  .ARM.extab     0x00000000        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
  .data          0x00000000        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .text          0x00000000        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .data          0x00000000        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .bss           0x00000000        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .text.malloc   0x00000000       0x10 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .text.free     0x00000000       0x10 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .debug_info    0x00000000      0x7a0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .debug_abbrev  0x00000000      0x1cf C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .debug_loclists
+                0x00000000       0x54 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .debug_aranges
+                0x00000000       0x28 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .debug_rnglists
+                0x00000000       0x19 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .debug_line    0x00000000      0x201 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .debug_str     0x00000000      0x556 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .comment       0x00000000       0x44 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .debug_frame   0x00000000       0x30 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
+ .ARM.attributes
+                0x00000000       0x34 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-malloc.o)
  .text          0x00000000        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
  .data          0x00000000        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
  .bss           0x00000000        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-errno.o)
@@ -4534,6 +4795,7 @@ LOAD cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/
 LOAD cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff.c.obj
 LOAD cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
 LOAD cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/syscall.c.obj
+LOAD cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c.obj
 LOAD CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
 LOAD CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
 LOAD CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
@@ -4564,7 +4826,7 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x08000000                g_pfnVectors
                 0x080001ac                        . = ALIGN (0x4)
 
-.text           0x080001ac     0x2af4
+.text           0x080001ac     0x2964
                 0x080001ac                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001ac       0x40 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -4675,271 +4937,245 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  *fill*         0x08001fb6        0x2 
  .text.UART_SetConfig
                 0x08001fb8      0x4e8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .text.FATFS_LinkDriverEx
-                0x080024a0       0x98 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
-                0x080024a0                FATFS_LinkDriverEx
- .text.FATFS_LinkDriver
-                0x08002538       0x1e cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
-                0x08002538                FATFS_LinkDriver
- *fill*         0x08002556        0x2 
- .text.MX_FATFS_Init
-                0x08002558       0x24 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
-                0x08002558                MX_FATFS_Init
- .text.USER_initialize
-                0x0800257c       0x28 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
-                0x0800257c                USER_initialize
- .text.USER_status
-                0x080025a4       0x28 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
-                0x080025a4                USER_status
- .text.USER_read
-                0x080025cc       0x1e CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
-                0x080025cc                USER_read
- .text.USER_write
-                0x080025ea       0x1e CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
-                0x080025ea                USER_write
- .text.USER_ioctl
-                0x08002608       0x22 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
-                0x08002608                USER_ioctl
- .text.main     0x0800262a       0x28 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
-                0x0800262a                main
- *fill*         0x08002652        0x2 
+ .text.main     0x080024a0       0x24 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x080024a0                main
  .text.SystemClock_Config
-                0x08002654       0xd8 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
-                0x08002654                SystemClock_Config
+                0x080024c4       0xd8 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x080024c4                SystemClock_Config
  .text.MX_I2C1_Init
-                0x0800272c       0x80 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x0800259c       0x80 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
  .text.MX_RTC_Init
-                0x080027ac       0x4c CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x0800261c       0x4c CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
  .text.MX_SPI1_Init
-                0x080027f8       0x6c CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x08002668       0x6c CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
  .text.MX_USART1_UART_Init
-                0x08002864       0x54 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x080026d4       0x54 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
  .text.MX_GPIO_Init
-                0x080028b8       0xbc CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x08002728       0xbc CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
  .text.Error_Handler
-                0x08002974        0xc CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
-                0x08002974                Error_Handler
+                0x080027e4        0xc CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x080027e4                Error_Handler
  .text.NMI_Handler
-                0x08002980        0x8 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002980                NMI_Handler
+                0x080027f0        0x8 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+                0x080027f0                NMI_Handler
  .text.HardFault_Handler
-                0x08002988        0x8 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002988                HardFault_Handler
+                0x080027f8        0x8 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+                0x080027f8                HardFault_Handler
  .text.MemManage_Handler
-                0x08002990        0x8 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002990                MemManage_Handler
+                0x08002800        0x8 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002800                MemManage_Handler
  .text.BusFault_Handler
-                0x08002998        0x8 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
-                0x08002998                BusFault_Handler
+                0x08002808        0x8 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002808                BusFault_Handler
  .text.UsageFault_Handler
-                0x080029a0        0x8 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080029a0                UsageFault_Handler
+                0x08002810        0x8 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002810                UsageFault_Handler
  .text.SVC_Handler
-                0x080029a8        0xe CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080029a8                SVC_Handler
+                0x08002818        0xe CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002818                SVC_Handler
  .text.DebugMon_Handler
-                0x080029b6        0xe CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080029b6                DebugMon_Handler
+                0x08002826        0xe CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002826                DebugMon_Handler
  .text.PendSV_Handler
-                0x080029c4        0xe CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080029c4                PendSV_Handler
+                0x08002834        0xe CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002834                PendSV_Handler
  .text.SysTick_Handler
-                0x080029d2        0xc CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
-                0x080029d2                SysTick_Handler
- *fill*         0x080029de        0x2 
+                0x08002842        0xc CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+                0x08002842                SysTick_Handler
+ *fill*         0x0800284e        0x2 
  .text.HAL_MspInit
-                0x080029e0       0x50 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x080029e0                HAL_MspInit
+                0x08002850       0x50 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08002850                HAL_MspInit
  .text.HAL_I2C_MspInit
-                0x08002a30       0x90 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08002a30                HAL_I2C_MspInit
+                0x080028a0       0x90 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x080028a0                HAL_I2C_MspInit
  .text.HAL_RTC_MspInit
-                0x08002ac0       0x54 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08002ac0                HAL_RTC_MspInit
+                0x08002930       0x54 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08002930                HAL_RTC_MspInit
  .text.HAL_SPI_MspInit
-                0x08002b14       0x90 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08002b14                HAL_SPI_MspInit
+                0x08002984       0x90 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08002984                HAL_SPI_MspInit
  .text.HAL_UART_MspInit
-                0x08002ba4       0x90 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
-                0x08002ba4                HAL_UART_MspInit
+                0x08002a14       0x90 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x08002a14                HAL_UART_MspInit
  .text.Reset_Handler
-                0x08002c34       0x50 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
-                0x08002c34                Reset_Handler
+                0x08002aa4       0x50 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
+                0x08002aa4                Reset_Handler
  .text.Default_Handler
-                0x08002c84        0x2 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
-                0x08002c84                RTC_Alarm_IRQHandler
-                0x08002c84                HASH_RNG_IRQHandler
-                0x08002c84                EXTI2_IRQHandler
-                0x08002c84                TIM8_CC_IRQHandler
-                0x08002c84                UART8_IRQHandler
-                0x08002c84                SPI4_IRQHandler
-                0x08002c84                TIM1_CC_IRQHandler
-                0x08002c84                DMA2_Stream5_IRQHandler
-                0x08002c84                DMA1_Stream5_IRQHandler
-                0x08002c84                PVD_IRQHandler
-                0x08002c84                SDIO_IRQHandler
-                0x08002c84                TAMP_STAMP_IRQHandler
-                0x08002c84                CAN2_RX1_IRQHandler
-                0x08002c84                EXTI3_IRQHandler
-                0x08002c84                TIM8_TRG_COM_TIM14_IRQHandler
-                0x08002c84                TIM1_UP_TIM10_IRQHandler
-                0x08002c84                TIM8_UP_TIM13_IRQHandler
-                0x08002c84                I2C3_ER_IRQHandler
-                0x08002c84                EXTI0_IRQHandler
-                0x08002c84                I2C2_EV_IRQHandler
-                0x08002c84                DMA1_Stream2_IRQHandler
-                0x08002c84                CAN1_RX0_IRQHandler
-                0x08002c84                FPU_IRQHandler
-                0x08002c84                OTG_HS_WKUP_IRQHandler
-                0x08002c84                LTDC_ER_IRQHandler
-                0x08002c84                CAN2_SCE_IRQHandler
-                0x08002c84                DMA2_Stream2_IRQHandler
-                0x08002c84                SPI1_IRQHandler
-                0x08002c84                TIM6_DAC_IRQHandler
-                0x08002c84                TIM1_BRK_TIM9_IRQHandler
-                0x08002c84                DCMI_IRQHandler
-                0x08002c84                CAN2_RX0_IRQHandler
-                0x08002c84                DMA2_Stream3_IRQHandler
-                0x08002c84                USART6_IRQHandler
-                0x08002c84                USART3_IRQHandler
-                0x08002c84                CAN1_RX1_IRQHandler
-                0x08002c84                UART5_IRQHandler
-                0x08002c84                DMA2_Stream0_IRQHandler
-                0x08002c84                TIM4_IRQHandler
-                0x08002c84                I2C1_EV_IRQHandler
-                0x08002c84                DMA1_Stream6_IRQHandler
-                0x08002c84                DMA1_Stream1_IRQHandler
-                0x08002c84                UART4_IRQHandler
-                0x08002c84                TIM3_IRQHandler
-                0x08002c84                RCC_IRQHandler
-                0x08002c84                TIM8_BRK_TIM12_IRQHandler
-                0x08002c84                Default_Handler
-                0x08002c84                EXTI15_10_IRQHandler
-                0x08002c84                ADC_IRQHandler
-                0x08002c84                DMA1_Stream7_IRQHandler
-                0x08002c84                SPI5_IRQHandler
-                0x08002c84                TIM7_IRQHandler
-                0x08002c84                CAN2_TX_IRQHandler
-                0x08002c84                TIM5_IRQHandler
-                0x08002c84                DMA2_Stream7_IRQHandler
-                0x08002c84                I2C3_EV_IRQHandler
-                0x08002c84                EXTI9_5_IRQHandler
-                0x08002c84                RTC_WKUP_IRQHandler
-                0x08002c84                LTDC_IRQHandler
-                0x08002c84                ETH_WKUP_IRQHandler
-                0x08002c84                SPI2_IRQHandler
-                0x08002c84                OTG_HS_EP1_IN_IRQHandler
-                0x08002c84                DMA1_Stream0_IRQHandler
-                0x08002c84                CAN1_TX_IRQHandler
-                0x08002c84                EXTI4_IRQHandler
-                0x08002c84                ETH_IRQHandler
-                0x08002c84                OTG_HS_EP1_OUT_IRQHandler
-                0x08002c84                WWDG_IRQHandler
-                0x08002c84                SPI6_IRQHandler
-                0x08002c84                TIM2_IRQHandler
-                0x08002c84                OTG_FS_WKUP_IRQHandler
-                0x08002c84                TIM1_TRG_COM_TIM11_IRQHandler
-                0x08002c84                OTG_HS_IRQHandler
-                0x08002c84                DMA2D_IRQHandler
-                0x08002c84                EXTI1_IRQHandler
-                0x08002c84                UART7_IRQHandler
-                0x08002c84                USART2_IRQHandler
-                0x08002c84                I2C2_ER_IRQHandler
-                0x08002c84                DMA2_Stream1_IRQHandler
-                0x08002c84                CAN1_SCE_IRQHandler
-                0x08002c84                FLASH_IRQHandler
-                0x08002c84                DMA2_Stream4_IRQHandler
-                0x08002c84                USART1_IRQHandler
-                0x08002c84                OTG_FS_IRQHandler
-                0x08002c84                SPI3_IRQHandler
-                0x08002c84                DMA1_Stream4_IRQHandler
-                0x08002c84                I2C1_ER_IRQHandler
-                0x08002c84                FMC_IRQHandler
-                0x08002c84                DMA2_Stream6_IRQHandler
-                0x08002c84                SAI1_IRQHandler
-                0x08002c84                DMA1_Stream3_IRQHandler
+                0x08002af4        0x2 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
+                0x08002af4                RTC_Alarm_IRQHandler
+                0x08002af4                HASH_RNG_IRQHandler
+                0x08002af4                EXTI2_IRQHandler
+                0x08002af4                TIM8_CC_IRQHandler
+                0x08002af4                UART8_IRQHandler
+                0x08002af4                SPI4_IRQHandler
+                0x08002af4                TIM1_CC_IRQHandler
+                0x08002af4                DMA2_Stream5_IRQHandler
+                0x08002af4                DMA1_Stream5_IRQHandler
+                0x08002af4                PVD_IRQHandler
+                0x08002af4                SDIO_IRQHandler
+                0x08002af4                TAMP_STAMP_IRQHandler
+                0x08002af4                CAN2_RX1_IRQHandler
+                0x08002af4                EXTI3_IRQHandler
+                0x08002af4                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08002af4                TIM1_UP_TIM10_IRQHandler
+                0x08002af4                TIM8_UP_TIM13_IRQHandler
+                0x08002af4                I2C3_ER_IRQHandler
+                0x08002af4                EXTI0_IRQHandler
+                0x08002af4                I2C2_EV_IRQHandler
+                0x08002af4                DMA1_Stream2_IRQHandler
+                0x08002af4                CAN1_RX0_IRQHandler
+                0x08002af4                FPU_IRQHandler
+                0x08002af4                OTG_HS_WKUP_IRQHandler
+                0x08002af4                LTDC_ER_IRQHandler
+                0x08002af4                CAN2_SCE_IRQHandler
+                0x08002af4                DMA2_Stream2_IRQHandler
+                0x08002af4                SPI1_IRQHandler
+                0x08002af4                TIM6_DAC_IRQHandler
+                0x08002af4                TIM1_BRK_TIM9_IRQHandler
+                0x08002af4                DCMI_IRQHandler
+                0x08002af4                CAN2_RX0_IRQHandler
+                0x08002af4                DMA2_Stream3_IRQHandler
+                0x08002af4                USART6_IRQHandler
+                0x08002af4                USART3_IRQHandler
+                0x08002af4                CAN1_RX1_IRQHandler
+                0x08002af4                UART5_IRQHandler
+                0x08002af4                DMA2_Stream0_IRQHandler
+                0x08002af4                TIM4_IRQHandler
+                0x08002af4                I2C1_EV_IRQHandler
+                0x08002af4                DMA1_Stream6_IRQHandler
+                0x08002af4                DMA1_Stream1_IRQHandler
+                0x08002af4                UART4_IRQHandler
+                0x08002af4                TIM3_IRQHandler
+                0x08002af4                RCC_IRQHandler
+                0x08002af4                TIM8_BRK_TIM12_IRQHandler
+                0x08002af4                Default_Handler
+                0x08002af4                EXTI15_10_IRQHandler
+                0x08002af4                ADC_IRQHandler
+                0x08002af4                DMA1_Stream7_IRQHandler
+                0x08002af4                SPI5_IRQHandler
+                0x08002af4                TIM7_IRQHandler
+                0x08002af4                CAN2_TX_IRQHandler
+                0x08002af4                TIM5_IRQHandler
+                0x08002af4                DMA2_Stream7_IRQHandler
+                0x08002af4                I2C3_EV_IRQHandler
+                0x08002af4                EXTI9_5_IRQHandler
+                0x08002af4                RTC_WKUP_IRQHandler
+                0x08002af4                LTDC_IRQHandler
+                0x08002af4                ETH_WKUP_IRQHandler
+                0x08002af4                SPI2_IRQHandler
+                0x08002af4                OTG_HS_EP1_IN_IRQHandler
+                0x08002af4                DMA1_Stream0_IRQHandler
+                0x08002af4                CAN1_TX_IRQHandler
+                0x08002af4                EXTI4_IRQHandler
+                0x08002af4                ETH_IRQHandler
+                0x08002af4                OTG_HS_EP1_OUT_IRQHandler
+                0x08002af4                WWDG_IRQHandler
+                0x08002af4                SPI6_IRQHandler
+                0x08002af4                TIM2_IRQHandler
+                0x08002af4                OTG_FS_WKUP_IRQHandler
+                0x08002af4                TIM1_TRG_COM_TIM11_IRQHandler
+                0x08002af4                OTG_HS_IRQHandler
+                0x08002af4                DMA2D_IRQHandler
+                0x08002af4                EXTI1_IRQHandler
+                0x08002af4                UART7_IRQHandler
+                0x08002af4                USART2_IRQHandler
+                0x08002af4                I2C2_ER_IRQHandler
+                0x08002af4                DMA2_Stream1_IRQHandler
+                0x08002af4                CAN1_SCE_IRQHandler
+                0x08002af4                FLASH_IRQHandler
+                0x08002af4                DMA2_Stream4_IRQHandler
+                0x08002af4                USART1_IRQHandler
+                0x08002af4                OTG_FS_IRQHandler
+                0x08002af4                SPI3_IRQHandler
+                0x08002af4                DMA1_Stream4_IRQHandler
+                0x08002af4                I2C1_ER_IRQHandler
+                0x08002af4                FMC_IRQHandler
+                0x08002af4                DMA2_Stream6_IRQHandler
+                0x08002af4                SAI1_IRQHandler
+                0x08002af4                DMA1_Stream3_IRQHandler
  *(.glue_7)
- .glue_7        0x08002c86        0x0 linker stubs
+ .glue_7        0x08002af6        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08002c86        0x0 linker stubs
+ .glue_7t       0x08002af6        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x08002c86        0x2 
- .eh_frame      0x08002c88        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ *fill*         0x08002af6        0x2 
+ .eh_frame      0x08002af8        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08002c88        0x4 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08002c88                _init
- .init          0x08002c8c        0x8 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08002af8        0x4 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08002af8                _init
+ .init          0x08002afc        0x8 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08002c94        0x4 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08002c94                _fini
- .fini          0x08002c98        0x8 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08002ca0                        . = ALIGN (0x4)
-                0x08002ca0                        _etext = .
+ .fini          0x08002b04        0x4 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08002b04                _fini
+ .fini          0x08002b08        0x8 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08002b10                        . = ALIGN (0x4)
+                0x08002b10                        _etext = .
 
-.vfp11_veneer   0x08002ca0        0x0
- .vfp11_veneer  0x08002ca0        0x0 linker stubs
+.vfp11_veneer   0x08002b10        0x0
+ .vfp11_veneer  0x08002b10        0x0 linker stubs
 
-.v4_bx          0x08002ca0        0x0
- .v4_bx         0x08002ca0        0x0 linker stubs
+.v4_bx          0x08002b10        0x0
+ .v4_bx         0x08002b10        0x0 linker stubs
 
-.iplt           0x08002ca0        0x0
- .iplt          0x08002ca0        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08002b10        0x0
+ .iplt          0x08002b10        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08002ca0       0x18
-                0x08002ca0                        . = ALIGN (0x4)
+.rodata         0x08002b10       0x18
+                0x08002b10                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.AHBPrescTable
-                0x08002ca0       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
-                0x08002ca0                AHBPrescTable
+                0x08002b10       0x10 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
+                0x08002b10                AHBPrescTable
  .rodata.APBPrescTable
-                0x08002cb0        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
-                0x08002cb0                APBPrescTable
-                0x08002cb8                        . = ALIGN (0x4)
+                0x08002b20        0x8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
+                0x08002b20                APBPrescTable
+                0x08002b28                        . = ALIGN (0x4)
 
-.ARM.extab      0x08002cb8        0x0
-                0x08002cb8                        . = ALIGN (0x4)
+.ARM.extab      0x08002b28        0x0
+                0x08002b28                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08002cb8                        . = ALIGN (0x4)
+                0x08002b28                        . = ALIGN (0x4)
 
-.ARM            0x08002cb8        0x8
-                0x08002cb8                        . = ALIGN (0x4)
-                0x08002cb8                        __exidx_start = .
+.ARM            0x08002b28        0x8
+                0x08002b28                        . = ALIGN (0x4)
+                0x08002b28                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x08002cb8        0x8 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
-                0x08002cc0                        __exidx_end = .
-                0x08002cc0                        . = ALIGN (0x4)
+ .ARM.exidx     0x08002b28        0x8 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+                0x08002b30                        __exidx_end = .
+                0x08002b30                        . = ALIGN (0x4)
 
-.preinit_array  0x08002cc0        0x0
-                0x08002cc0                        . = ALIGN (0x4)
-                0x08002cc0                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08002b30        0x0
+                0x08002b30                        . = ALIGN (0x4)
+                0x08002b30                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08002cc0                        PROVIDE (__preinit_array_end = .)
-                0x08002cc0                        . = ALIGN (0x4)
+                0x08002b30                        PROVIDE (__preinit_array_end = .)
+                0x08002b30                        . = ALIGN (0x4)
 
-.init_array     0x08002cc0        0x4
-                0x08002cc0                        . = ALIGN (0x4)
-                0x08002cc0                        PROVIDE (__init_array_start = .)
+.init_array     0x08002b30        0x4
+                0x08002b30                        . = ALIGN (0x4)
+                0x08002b30                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08002cc0        0x4 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08002cc4                        PROVIDE (__init_array_end = .)
-                0x08002cc4                        . = ALIGN (0x4)
+ .init_array    0x08002b30        0x4 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08002b34                        PROVIDE (__init_array_end = .)
+                0x08002b34                        . = ALIGN (0x4)
 
-.fini_array     0x08002cc4        0x4
-                0x08002cc4                        . = ALIGN (0x4)
+.fini_array     0x08002b34        0x4
+                0x08002b34                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08002cc4        0x4 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x08002b34        0x4 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08002cc8                        . = ALIGN (0x4)
-                0x08002cc8                        _sidata = LOADADDR (.data)
+                0x08002b38                        . = ALIGN (0x4)
+                0x08002b38                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x08002cc8        0x0
- .rel.iplt      0x08002cc8        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08002b38        0x0
+ .rel.iplt      0x08002b38        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x20000000       0x20 load address 0x08002cc8
+.data           0x20000000        0xc load address 0x08002b38
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -4953,21 +5189,17 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .data.uwTickFreq
                 0x20000008        0x1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
                 0x20000008                uwTickFreq
- .data.Stat     0x20000009        0x1 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- *fill*         0x2000000a        0x2 
- .data.USER_Driver
-                0x2000000c       0x14 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
-                0x2000000c                USER_Driver
  *(.RamFunc)
  *(.RamFunc*)
-                0x20000020                        . = ALIGN (0x4)
-                0x20000020                        _edata = .
-                0x08002ce8                        _siccmram = LOADADDR (.ccmram)
+                0x2000000c                        . = ALIGN (0x4)
+ *fill*         0x20000009        0x3 
+                0x2000000c                        _edata = .
+                0x08002b44                        _siccmram = LOADADDR (.ccmram)
 
-.igot.plt       0x20000020        0x0 load address 0x08002ce8
- .igot.plt      0x20000020        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.igot.plt       0x2000000c        0x0 load address 0x08002b44
+ .igot.plt      0x2000000c        0x0 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.ccmram         0x10000000        0x0 load address 0x08002ce8
+.ccmram         0x10000000        0x0 load address 0x08002b44
                 0x10000000                        . = ALIGN (0x4)
                 0x10000000                        _sccmram = .
  *(.ccmram)
@@ -4976,44 +5208,37 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x10000000                        _eccmram = .
                 0x10000000                        . = ALIGN (0x4)
 
-.bss            0x20000020      0x148
-                0x20000020                        _sbss = .
-                0x20000020                        __bss_start__ = _sbss
+.bss            0x2000000c      0x134
+                0x2000000c                        _sbss = .
+                0x2000000c                        __bss_start__ = _sbss
  *(.bss)
- .bss           0x20000020       0x1c C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .bss           0x2000000c       0x1c C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
- .bss.uwTick    0x2000003c        0x4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
-                0x2000003c                uwTick
- .bss.disk      0x20000040        0xc cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
-                0x20000040                disk
- .bss.retUSER   0x2000004c        0x1 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
-                0x2000004c                retUSER
- *fill*         0x2000004d        0x3 
- .bss.USERPath  0x20000050        0x4 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
-                0x20000050                USERPath
- .bss.hi2c1     0x20000054       0x54 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
-                0x20000054                hi2c1
- .bss.hrtc      0x200000a8       0x20 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
-                0x200000a8                hrtc
- .bss.hspi1     0x200000c8       0x58 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
-                0x200000c8                hspi1
- .bss.huart1    0x20000120       0x48 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
-                0x20000120                huart1
+ .bss.uwTick    0x20000028        0x4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+                0x20000028                uwTick
+ .bss.hi2c1     0x2000002c       0x54 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x2000002c                hi2c1
+ .bss.hrtc      0x20000080       0x20 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x20000080                hrtc
+ .bss.hspi1     0x200000a0       0x58 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x200000a0                hspi1
+ .bss.huart1    0x200000f8       0x48 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x200000f8                huart1
  *(COMMON)
-                0x20000168                        . = ALIGN (0x4)
-                0x20000168                        _ebss = .
-                0x20000168                        __bss_end__ = _ebss
+                0x20000140                        . = ALIGN (0x4)
+                0x20000140                        _ebss = .
+                0x20000140                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20000168      0x600
-                0x20000168                        . = ALIGN (0x8)
+                0x20000140      0x600
+                0x20000140                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x20000168                        PROVIDE (_end = .)
-                0x20000368                        . = (. + _Min_Heap_Size)
- *fill*         0x20000168      0x200 
-                0x20000768                        . = (. + _Min_Stack_Size)
- *fill*         0x20000368      0x400 
-                0x20000768                        . = ALIGN (0x8)
+                0x20000140                        PROVIDE (_end = .)
+                0x20000340                        . = (. + _Min_Heap_Size)
+ *fill*         0x20000140      0x200 
+                0x20000740                        . = (. + _Min_Stack_Size)
+ *fill*         0x20000340      0x400 
+                0x20000740                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
@@ -5058,27 +5283,21 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .ARM.attributes
                 0x000002c6       0x34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .ARM.attributes
-                0x000002fa       0x34 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+                0x000002fa       0x34 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
  .ARM.attributes
-                0x0000032e       0x34 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+                0x0000032e       0x34 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
  .ARM.attributes
-                0x00000362       0x34 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+                0x00000362       0x34 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .ARM.attributes
-                0x00000396       0x34 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+                0x00000396       0x21 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
  .ARM.attributes
-                0x000003ca       0x34 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+                0x000003b7       0x22 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
  .ARM.attributes
-                0x000003fe       0x34 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+                0x000003d9       0x34 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
  .ARM.attributes
-                0x00000432       0x21 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
+                0x0000040d       0x22 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x00000453       0x22 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .ARM.attributes
-                0x00000475       0x34 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .ARM.attributes
-                0x000004a9       0x22 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
- .ARM.attributes
-                0x000004cb       0x22 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x0000042f       0x22 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
@@ -5093,14 +5312,11 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .comment       0x00000043       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
  .comment       0x00000043       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .comment       0x00000043       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .comment       0x00000043       0x44 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
- .comment       0x00000043       0x44 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
- .comment       0x00000043       0x44 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
  .comment       0x00000043       0x44 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
  .comment       0x00000043       0x44 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
  .comment       0x00000043       0x44 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
 
-.debug_frame    0x00000000     0x35d8
+.debug_frame    0x00000000     0x33ec
  .debug_frame   0x00000000       0x20 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-memset.o)
  .debug_frame   0x00000020       0x2c C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-init.o)
  .debug_frame   0x0000004c       0x58 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
@@ -5114,16 +5330,13 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_frame   0x00001ac0      0x3f4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
  .debug_frame   0x00001eb4      0x828 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .debug_frame   0x000026dc      0x954 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_frame   0x00003030       0xc8 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
- .debug_frame   0x000030f8       0x4c CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
- .debug_frame   0x00003144       0xd8 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_frame   0x0000321c       0xfc CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
- .debug_frame   0x00003318      0x104 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_frame   0x0000341c      0x15c CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_frame   0x00003578       0x2c C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_frame   0x000035a4       0x34 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x00003030       0xfc CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+ .debug_frame   0x0000312c      0x104 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_frame   0x00003230      0x15c CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_frame   0x0000338c       0x2c C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x000033b8       0x34 C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
 
-.debug_info     0x00000000     0xe3da
+.debug_info     0x00000000     0xd852
  .debug_info    0x00000000      0x52e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_info    0x0000052e      0x8db cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
  .debug_info    0x00000e09      0x64c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
@@ -5135,15 +5348,12 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_info    0x00005d3f      0xc20 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
  .debug_info    0x0000695f     0x1525 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .debug_info    0x00007e84     0x2f4f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_info    0x0000add3      0x37f cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
- .debug_info    0x0000b152      0x4d9 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
- .debug_info    0x0000b62b      0x328 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_info    0x0000b953     0x14d1 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
- .debug_info    0x0000ce24      0x112 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_info    0x0000cf36     0x1474 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_info    0x0000e3aa       0x30 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
+ .debug_info    0x0000add3     0x14c9 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+ .debug_info    0x0000c29c      0x112 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_info    0x0000c3ae     0x1474 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_info    0x0000d822       0x30 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
 
-.debug_abbrev   0x00000000     0x2191
+.debug_abbrev   0x00000000     0x1d43
  .debug_abbrev  0x00000000      0x11a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_abbrev  0x0000011a      0x2b7 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
  .debug_abbrev  0x000003d1      0x1b0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
@@ -5155,15 +5365,12 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_abbrev  0x0000108a      0x1dd cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
  .debug_abbrev  0x00001267      0x27a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .debug_abbrev  0x000014e1      0x30e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_abbrev  0x000017ef      0x19f cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
- .debug_abbrev  0x0000198e      0x160 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
- .debug_abbrev  0x00001aee      0x13c CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_abbrev  0x00001c2a      0x2a0 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
- .debug_abbrev  0x00001eca       0x73 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_abbrev  0x00001f3d      0x230 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_abbrev  0x0000216d       0x24 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
+ .debug_abbrev  0x000017ef      0x28d CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x00001a7c       0x73 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_abbrev  0x00001aef      0x230 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_abbrev  0x00001d1f       0x24 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
 
-.debug_aranges  0x00000000      0xd08
+.debug_aranges  0x00000000      0xc60
  .debug_aranges
                 0x00000000       0x28 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_aranges
@@ -5187,22 +5394,16 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_aranges
                 0x00000918      0x208 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .debug_aranges
-                0x00000b20       0x40 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+                0x00000b20       0x58 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
  .debug_aranges
-                0x00000b60       0x28 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+                0x00000b78       0x60 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
  .debug_aranges
-                0x00000b88       0x40 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+                0x00000bd8       0x60 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_aranges
-                0x00000bc8       0x58 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
- .debug_aranges
-                0x00000c20       0x60 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_aranges
-                0x00000c80       0x60 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_aranges
-                0x00000ce0       0x28 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
+                0x00000c38       0x28 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
 
 .debug_rnglists
-                0x00000000      0xa23
+                0x00000000      0x9b3
  .debug_rnglists
                 0x00000000       0x1a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_rnglists
@@ -5226,21 +5427,15 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_rnglists
                 0x00000715      0x1bc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
  .debug_rnglists
-                0x000008d1       0x2c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
+                0x000008d1       0x40 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
  .debug_rnglists
-                0x000008fd       0x19 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
+                0x00000911       0x43 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
  .debug_rnglists
-                0x00000916       0x2b CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
+                0x00000954       0x46 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
  .debug_rnglists
-                0x00000941       0x40 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
- .debug_rnglists
-                0x00000981       0x43 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_rnglists
-                0x000009c4       0x46 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_rnglists
-                0x00000a0a       0x19 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
+                0x0000099a       0x19 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
 
-.debug_macro    0x00000000    0x240dc
+.debug_macro    0x00000000    0x235b1
  .debug_macro   0x00000000      0x1f6 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_macro   0x000001f6      0xad8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_macro   0x00000cce       0x2e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
@@ -5296,21 +5491,12 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_macro   0x000227b9      0x1f7 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
  .debug_macro   0x000229b0      0x205 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .debug_macro   0x00022bb5      0x1f7 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_macro   0x00022dac      0x303 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
- .debug_macro   0x000230af      0x316 CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
- .debug_macro   0x000233c5      0x333 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_macro   0x000236f8       0x6e CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_macro   0x00023766       0x94 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_macro   0x000237fa       0x57 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_macro   0x00023851       0x10 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_macro   0x00023861       0x20 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_macro   0x00023881       0x56 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_macro   0x000238d7      0x310 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
- .debug_macro   0x00023be7       0xeb CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
- .debug_macro   0x00023cd2      0x20a CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_macro   0x00023edc      0x200 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_macro   0x00022dac      0x310 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+ .debug_macro   0x000230bc       0xeb CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+ .debug_macro   0x000231a7      0x20a CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_macro   0x000233b1      0x200 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
 
-.debug_line     0x00000000    0x10f69
+.debug_line     0x00000000     0xf50b
  .debug_line    0x00000000      0x78a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
  .debug_line    0x0000078a      0xe15 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
  .debug_line    0x0000159f      0xc5e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
@@ -5322,34 +5508,28 @@ LOAD C:/ST/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .debug_line    0x000086d7     0x1137 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
  .debug_line    0x0000980e     0x1ca1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
  .debug_line    0x0000b4af     0x254e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_line    0x0000d9fd      0x8f7 cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
- .debug_line    0x0000e2f4      0x89d CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
- .debug_line    0x0000eb91      0x8c9 CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_line    0x0000f45a      0xa86 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
- .debug_line    0x0000fee0      0x7c3 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_line    0x000106a3      0x84c CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_line    0x00010eef       0x7a CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
+ .debug_line    0x0000d9fd      0xa85 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+ .debug_line    0x0000e482      0x7c3 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_line    0x0000ec45      0x84c CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_line    0x0000f491       0x7a CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
 
-.debug_str      0x00000000    0xdbb48
- .debug_str     0x00000000    0xdbb48 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
+.debug_str      0x00000000    0xdb744
+ .debug_str     0x00000000    0xdb744 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32f4xx.c.obj
                               0xd47b9 (size before relaxing)
- .debug_str     0x000dbb48    0xd4bed cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
- .debug_str     0x000dbb48    0xd49b4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
- .debug_str     0x000dbb48    0xd4934 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
- .debug_str     0x000dbb48    0xd510a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
- .debug_str     0x000dbb48    0xd53dc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
- .debug_str     0x000dbb48    0xd57c9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
- .debug_str     0x000dbb48    0xd4b88 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
- .debug_str     0x000dbb48    0xd4c15 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
- .debug_str     0x000dbb48    0xd5064 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
- .debug_str     0x000dbb48    0xd51bb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
- .debug_str     0x000dbb48    0xd795c cmake/stm32cubemx/CMakeFiles/FatFs.dir/__/__/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c.obj
- .debug_str     0x000dbb48    0xd79fc CMakeFiles/BME280SensorLog.dir/FATFS/App/fatfs.c.obj
- .debug_str     0x000dbb48    0xd797a CMakeFiles/BME280SensorLog.dir/FATFS/Target/user_diskio.c.obj
- .debug_str     0x000dbb48    0xd86b7 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
- .debug_str     0x000dbb48    0xd467c CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
- .debug_str     0x000dbb48    0xd53c7 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
- .debug_str     0x000dbb48       0xa2 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
+ .debug_str     0x000db744    0xd4bed cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c.obj
+ .debug_str     0x000db744    0xd49b4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c.obj
+ .debug_str     0x000db744    0xd4934 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c.obj
+ .debug_str     0x000db744    0xd510a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c.obj
+ .debug_str     0x000db744    0xd53dc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c.obj
+ .debug_str     0x000db744    0xd57c9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c.c.obj
+ .debug_str     0x000db744    0xd4b88 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_i2c_ex.c.obj
+ .debug_str     0x000db744    0xd4c15 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c.obj
+ .debug_str     0x000db744    0xd5064 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c.obj
+ .debug_str     0x000db744    0xd51bb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c.obj
+ .debug_str     0x000db744    0xd86a9 CMakeFiles/BME280SensorLog.dir/Core/Src/main.c.obj
+ .debug_str     0x000db744    0xd467c CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_it.c.obj
+ .debug_str     0x000db744    0xd53c7 CMakeFiles/BME280SensorLog.dir/Core/Src/stm32f4xx_hal_msp.c.obj
+ .debug_str     0x000db744       0xa2 CMakeFiles/BME280SensorLog.dir/startup_stm32f429xx.s.obj
 
 .debug_line_str
                 0x00000000       0x86
