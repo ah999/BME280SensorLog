@@ -204,3 +204,138 @@ void BME280_WakeUP(void)
 
 	HAL_Delay (100);
 }
+
+/************* COMPENSATION CALCULATION AS PER DATASHEET (page 25) **************************/
+
+/* Returns temperature in DegC, resolution is 0.01 DegC. Output value of “5123” equals 51.23 DegC.
+   t_fine carries fine temperature as global value
+*/
+int32_t t_fine;
+int32_t BME280_compensate_T_int32(int32_t adc_T)
+{
+	int32_t var1, var2, T;
+	var1 = ((((adc_T>>3) - ((int32_t)dig_T1<<1))) * ((int32_t)dig_T2)) >> 11;
+	var2 = (((((adc_T>>4) - ((int32_t)dig_T1)) * ((adc_T>>4) - ((int32_t)dig_T1)))>> 12) *((int32_t)dig_T3)) >> 14;
+	t_fine = var1 + var2;
+	T = (t_fine * 5 + 128) >> 8;
+	return T;
+}
+
+
+#if SUPPORT_64BIT
+/* Returns pressure in Pa as unsigned 32 bit integer in Q24.8 format (24 integer bits and 8 fractional bits).
+   Output value of “24674867” represents 24674867/256 = 96386.2 Pa = 963.862 hPa
+*/
+uint32_t BME280_compensate_P_int64(int32_t adc_P)
+{
+	int64_t var1, var2, p;
+	var1 = ((int64_t)t_fine) - 128000;
+	var2 = var1 * var1 * (int64_t)dig_P6;
+	var2 = var2 + ((var1*(int64_t)dig_P5)<<17);
+	var2 = var2 + (((int64_t)dig_P4)<<35);
+	var1 = ((var1 * var1 * (int64_t)dig_P3)>>8) + ((var1 * (int64_t)dig_P2)<<12);
+	var1 = (((((int64_t)1)<<47)+var1))*((int64_t)dig_P1)>>33;
+	if (var1 == 0)
+	{
+		return 0; // avoid exception caused by division by zero
+	}
+	p = 1048576-adc_P;
+	p = (((p<<31)-var2)*3125)/var1;
+	var1 = (((int64_t)dig_P9) * (p>>13) * (p>>13)) >> 25;
+	var2 = (((int64_t)dig_P8) * p) >> 19;
+	p = ((p + var1 + var2) >> 8) + (((int64_t)dig_P7)<<4);
+	return (uint32_t)p;
+}
+
+#elif SUPPORT_32BIT
+// Returns pressure in Pa as unsigned 32 bit integer. Output value of “96386” equals 96386 Pa = 963.86 hPa
+uint32_t BME280_compensate_P_int32(int32_t adc_P)
+{
+	int32_t var1, var2;
+	uint32_t p;
+	var1 = (((int32_t)t_fine)>>1) - (int32_t)64000;
+	var2 = (((var1>>2) * (var1>>2)) >> 11 ) * ((int32_t)dig_P6);
+	var2 = var2 + ((var1*((int32_t)dig_P5))<<1);
+	var2 = (var2>>2)+(((int32_t)dig_P4)<<16);
+	var1 = (((dig_P3 * (((var1>>2) * (var1>>2)) >> 13 )) >> 3) + ((((int32_t)dig_P2) *var1)>>1))>>18;
+	var1 =((((32768+var1))*((int32_t)dig_P1))>>15);
+	if (var1 == 0)
+	{
+		return 0; // avoid exception caused by division by zero
+	}
+	p = (((uint32_t)(((int32_t)1048576)-adc_P)-(var2>>12)))*3125;
+	if (p < 0x80000000)
+	{
+		p = (p << 1) / ((uint32_t)var1);
+	}
+	else
+	{
+		p = (p / (uint32_t)var1) * 2;
+	}
+	var1 = (((int32_t)dig_P9) * ((int32_t)(((p>>3) * (p>>3))>>13)))>>12;
+	var2 = (((int32_t)(p>>2)) * ((int32_t)dig_P8))>>13;
+	p = (uint32_t)((int32_t)p + ((var1 + var2 + dig_P7) >> 4));
+	return p;
+}
+#endif
+
+/* Returns humidity in %RH as unsigned 32 bit integer in Q22.10 format (22 integer and 10 fractional bits).
+   Output value of “47445” represents 47445/1024 = 46.333 %RH
+*/
+uint32_t bme280_compensate_H_int32(int32_t adc_H)
+{
+	int32_t v_x1_u32r;
+	v_x1_u32r = (t_fine - ((int32_t)76800));
+	v_x1_u32r = (((((adc_H << 14) - (((int32_t)dig_H4) << 20) - (((int32_t)dig_H5) *\
+			v_x1_u32r)) + ((int32_t)16384)) >> 15) * (((((((v_x1_u32r *\
+					((int32_t)dig_H6)) >> 10) * (((v_x1_u32r * ((int32_t)dig_H3)) >> 11) +\
+							((int32_t)32768))) >> 10) + ((int32_t)2097152)) * ((int32_t)dig_H2) +\
+					8192) >> 14));
+	v_x1_u32r = (v_x1_u32r - (((((v_x1_u32r >> 15) * (v_x1_u32r >> 15)) >> 7) *\
+			((int32_t)dig_H1)) >> 4));
+	v_x1_u32r = (v_x1_u32r < 0 ? 0 : v_x1_u32r);
+	v_x1_u32r = (v_x1_u32r > 419430400 ? 419430400 : v_x1_u32r);
+	return (uint32_t)(v_x1_u32r>>12);
+}
+/*********************************************************************************************************/
+
+
+/* measure the temp, pressure and humidity
+ * the values will be stored in the parameters passed to the function
+ */
+void BME280_Measure (void)
+{
+	if (BMEReadRaw() == 0)
+	{
+		  if (tRaw == 0x800000) Temperature = 0; // value in case temp measurement was disabled
+		  else
+		  {
+			  Temperature = (BME280_compensate_T_int32 (tRaw))/100.0;  // as per datasheet, the temp is x100
+		  }
+
+		  if (pRaw == 0x800000) Pressure = 0; // value in case temp measurement was disabled
+		  else
+		  {
+#if SUPPORT_64BIT
+			  Pressure = (BME280_compensate_P_int64 (pRaw))/256.0;  // as per datasheet, the pressure is x256
+
+#elif SUPPORT_32BIT
+			  Pressure = (BME280_compensate_P_int32 (pRaw));  // as per datasheet, the pressure is Pa
+
+#endif
+		  }
+
+		  if (hRaw == 0x8000) Humidity = 0; // value in case temp measurement was disabled
+		  else
+		  {
+			  Humidity = (bme280_compensate_H_int32 (hRaw))/1024.0;  // as per datasheet, the temp is x1024
+		  }
+	}
+
+
+	// if the device is detached
+	else
+	{
+		Temperature = Pressure = Humidity = 0;
+	}
+}
