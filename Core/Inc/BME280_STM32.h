@@ -1,3 +1,25 @@
+/*
+  ***************************************************************************************************************
+  ***************************************************************************************************************
+  ***************************************************************************************************************
+
+  File:		  BME280_STM32.h
+  Author:     ControllersTech.com
+  Updated:    Dec 14, 2021
+  Refactored: Using BME280_Data struct
+
+  ***************************************************************************************************************
+  Copyright (C) 2017 ControllersTech.com
+
+  This is a free software under the GNU license, you can redistribute it and/or modify it under the terms
+  of the GNU General Public License version 3 as published by the Free Software Foundation.
+  This software library is shared with public for educational purposes, without WARRANTY and Author is not liable for any damages caused directly
+  or indirectly by this software, read more about this on the GNU General Public License.
+
+  ***************************************************************************************************************
+*/
+
+
 #ifndef INC_BME280_STM32_H_
 #define INC_BME280_STM32_H_
 
@@ -22,21 +44,48 @@
  *         Check datasheet page no 18 and page no 30
  */
 
-int BME280_Config (uint8_t osrs_t, uint8_t osrs_p, uint8_t osrs_h, uint8_t mode, uint8_t t_sb, uint8_t filter);
+// Function prototypes
+int BME280_Init(BME280_Data *bme, I2C_HandleTypeDef *i2c_handle, uint8_t address);
+
+int BME280_Config(BME280_Data *bme, uint8_t osrs_t, uint8_t osrs_p, uint8_t osrs_h, 
+                  uint8_t mode, uint8_t t_sb, uint8_t filter);
 
 
 // Read the Trimming parameters saved in the NVM ROM of the device
-void TrimRead(void);
+void TrimRead(BME280_Data *bme);
 
 /* To be used when doing the force measurement
  * the Device need to be put in forced mode every time the measurement is needed
  */
-void BME280_WakeUP(void);
+void BME280_WakeUP(BME280_Data *bme);
+
+//read the raw data
+BMEReadRaw(BME280_Data *bme);
 
 /* measure the temp, pressure and humidity
  * the values will be stored in the parameters passed to the function
  */
-void BME280_Measure (void);
+void BME280_Measure (BME280_Data *bme);
+
+// BME280 Data Structure
+typedef struct {
+    I2C_HandleTypeDef *i2c_handle;
+    uint8_t dev_address;
+    uint8_t chip_id;
+    
+    // Raw sensor data
+    int32_t tRaw, pRaw, hRaw;
+    int32_t t_fine;
+    
+    // Trimming parameters
+    uint16_t dig_T1, dig_P1, dig_H1, dig_H3;
+    int16_t dig_T2, dig_T3,
+            dig_P2, dig_P3, dig_P4, dig_P5, dig_P6, dig_P7, dig_P8, dig_P9,
+            dig_H2, dig_H4, dig_H5, dig_H6;
+    
+    // Compensated sensor readings
+    float Temperature, Pressure, Humidity;
+} BME280_Data;
 
 
 // Oversampling definitions
