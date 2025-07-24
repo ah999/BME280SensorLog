@@ -1,48 +1,7 @@
-/*
-  ***************************************************************************************************************
-  ***************************************************************************************************************
-  ***************************************************************************************************************
 
-  File:		  BME280_STM32.c
-  Author:     ControllersTech.com
-  Updated:    Dec 14, 2021
-
-  ***************************************************************************************************************
-  Copyright (C) 2017 ControllersTech.com
-
-  This is a free software under the GNU license, you can redistribute it and/or modify it under the terms
-  of the GNU General Public License version 3 as published by the Free Software Foundation.
-  This software library is shared with public for educational purposes, without WARRANTY and Author is not liable for any damages caused directly
-  or indirectly by this software, read more about this on the GNU General Public License.
-
-  ***************************************************************************************************************
-*/
 
 #include "BME280_STM32.h"
 
-extern I2C_HandleTypeDef hi2c1;
-#define BME280_I2C &hi2c1
-
-#define SUPPORT_64BIT 1
-//#define SUPPORT_32BIT 1
-
-#define BME280_ADDRESS 0xEC  // SDIO is grounded, the 7 bit address is 0x76 and 8 bit address = 0x76<<1 = 0xEC
-
-
-extern float Temperature, Pressure, Humidity;
-
-uint8_t chipID;
-
-uint8_t TrimParam[36];
-int32_t tRaw, pRaw, hRaw;
-
-uint16_t dig_T1,  \
-         dig_P1, \
-         dig_H1, dig_H3;
-
-int16_t  dig_T2, dig_T3, \
-         dig_P2, dig_P3, dig_P4, dig_P5, dig_P6, dig_P7, dig_P8, dig_P9, \
-		 dig_H2,  dig_H4, dig_H5, dig_H6;
 
 // Initialize the BME280 sensor
 int BME280_Init(BME280_Data *bme, I2C_HandleTypeDef *i2c_handle, uint8_t address)
@@ -73,7 +32,7 @@ int BME280_Init(BME280_Data *bme, I2C_HandleTypeDef *i2c_handle, uint8_t address
     return 0;
 }
 // Read the Trimming parameters saved in the NVM ROM of the device
-void TrimRead(@BME280_Data *bme)
+void TrimRead(BME280_Data *bme)
 {
 	uint8_t trimdata[32];
 	// Read NVM from 0x88 to 0xA1
@@ -213,7 +172,7 @@ int BMEReadRaw(BME280_Data *bme)
 /* To be used when doing the force measurement
  * the Device need to be put in forced mode every time the measurement is needed
  */
-void BME280_WakeUp(BME280_Data *bme)
+void BME280_WakeUP(BME280_Data *bme)
 {
     if (bme == NULL) {
         return;
@@ -345,7 +304,7 @@ void BME280_Measure (BME280_Data *bme)
         return;
     }
     
-    if (BME280_ReadRaw(bme) == 0) {
+    if (BMEReadRaw(bme) == 0) {
         // Temperature measurement
         if (bme->tRaw == 0x800000) {
             bme->Temperature = 0; // value in case temp measurement was disabled

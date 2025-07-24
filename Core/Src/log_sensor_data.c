@@ -54,7 +54,7 @@ LogStatus get_sd_card_info(SD_Card_Logger *logger)
         return LOG_SD_MOUNT_ERROR;
     }
 
-    fresult = f_getfree("", &free_clusters, &pfs);
+    fresult = f_getfree("", &logger->free_clusters, &logger->pfs);
     if (fresult != FR_OK) {
         return LOG_SD_MOUNT_ERROR;
     }
@@ -85,7 +85,7 @@ LogStatus create_data_file_header(SD_Card_Logger *logger)
 
     if (fresult == FR_NO_FILE) {
         // File doesn't exist, create it with header
-        fresult = f_open(&fil, DATA_FILENAME, FA_CREATE_NEW | FA_WRITE);
+        fresult = f_open(&logger->fil, DATA_FILENAME, FA_CREATE_NEW | FA_WRITE);
         if (fresult != FR_OK) {
             return LOG_FILE_CREATE_ERROR;
         }

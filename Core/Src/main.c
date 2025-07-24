@@ -61,15 +61,6 @@ LogStatus log_status;  // Status of the logging system
 SD_Card_Logger sd_logger;  // SD card logger instance
 BME280_Data bme1;  // BME280 data structure
 
-// Utility functions
-void send_uart_message(SD_Card_Logger *logger, const char *message)
-{
-    if (!logger || !logger->uart_handle || !message) {
-        return;
-    }
-    
-    HAL_UART_Transmit(logger->uart_handle, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
-}
 
 
 /* USER CODE BEGIN PV */
