@@ -70,15 +70,17 @@ LogStatus display_last_entries(SD_Card_Logger *logger, uint8_t num_entries);
 LogStatus clear_log_file(SD_Card_Logger *logger);
 LogStatus check_sd_card_status(SD_Card_Logger *logger);
 
-// File operation helpers
-LogStatus open_data_file_append(SD_Card_Logger *logger);
-LogStatus open_data_file_read(SD_Card_Logger *logger);
-LogStatus close_data_file(SD_Card_Logger *logger);
 
 // Utility functions
 void send_uart_message(SD_Card_Logger *logger, const char *message);
 void clear_log_buffer(SD_Card_Logger *logger);
 uint32_t get_buffer_size(const char *buf);
 LogStatus check_sd_card_status(SD_Card_Logger *logger);
+
+// File operation helpers
+LogStatus open_data_file_append(SD_Card_Logger *logger);
+LogStatus open_data_file_read(SD_Card_Logger *logger);
+LogStatus close_data_file(SD_Card_Logger *logger);
+
 
 #endif // LOG_SENSOR_DATA_H

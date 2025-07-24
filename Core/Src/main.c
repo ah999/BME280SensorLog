@@ -61,6 +61,15 @@ LogStatus log_status;  // Status of the logging system
 SD_Card_Logger sd_logger;  // SD card logger instance
 BME280_Data bme1;  // BME280 data structure
 
+// Utility functions
+void send_uart_message(SD_Card_Logger *logger, const char *message)
+{
+    if (!logger || !logger->uart_handle || !message) {
+        return;
+    }
+    
+    HAL_UART_Transmit(logger->uart_handle, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
+}
 
 
 /* USER CODE BEGIN PV */
@@ -121,9 +130,15 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   // Initialize SD card logging system
+
+  log_status = log_sensor_init(&sd_logger, &huart1);
+  if (log_status != LOG_OK) {
+     //handle_logging_error(log_status);
+     send_uart_message(&sd_logger, "SD card logging failed to initialize!\r\n");
+     send_uart_message(&sd_logger, "Continuing with UART output only...\r\n");
+   }
   
-  
-// Welcome message
+  // Welcome message
     send_uart_message(&sd_logger, "\r\n=== BME280 SD Card Data Logger ===\r\n");
     send_uart_message(&sd_logger, "Initializing system...\r\n");
 
@@ -136,12 +151,7 @@ int main(void)
     // Wait for system stabilization
     HAL_Delay(1000);
 
-  log_status = log_sensor_init(&sd_logger, &huart1);
-  if (log_status != LOG_OK) {
-     //handle_logging_error(log_status);
-     send_uart_message(&sd_logger, "SD card logging failed to initialize!\r\n");
-     send_uart_message(&sd_logger, "Continuing with UART output only...\r\n");
-   }
+  
 
     send_uart_message(&sd_logger, "System ready. Starting data logging...\r\n");
     send_uart_message(&sd_logger, "Data format: Temperature(C), Humidity(%), Pressure(hPa)\r\n\r\n");

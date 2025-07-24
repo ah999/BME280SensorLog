@@ -73,7 +73,7 @@ int BME280_Init(BME280_Data *bme, I2C_HandleTypeDef *i2c_handle, uint8_t address
     return 0;
 }
 // Read the Trimming parameters saved in the NVM ROM of the device
-void TrimRead(void)
+void TrimRead(@BME280_Data *bme)
 {
 	uint8_t trimdata[32];
 	// Read NVM from 0x88 to 0xA1
@@ -185,7 +185,7 @@ int BME280_Config (BME280_Data *bme, uint8_t osrs_t, uint8_t osrs_p, uint8_t osr
 }
 
 
-int BMEReadRaw(void)
+int BMEReadRaw(BME280_Data *bme)
 {
 	uint8_t RawData[8];
 
