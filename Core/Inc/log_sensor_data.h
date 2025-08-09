@@ -6,6 +6,7 @@
 #include "string.h"
 #include "stdio.h"
 #include "stm32f4xx_hal.h"
+#include "stdint.h"
 
 
 
@@ -28,24 +29,7 @@ typedef enum {
 
 // The main struct for the SD Card Logger
 typedef struct {
-    // FatFs handles
-    FATFS fs;
-    FIL fil;
-    FATFS *pfs;
-    
-    // Buffers for data handling
-    char log_buffer[LOG_BUFFER_SIZE];
-    char uart_buffer[UART_BUFFER_SIZE];
-    char sensor_data_buffer[SENSOR_DATA_BUFFER_SIZE];
-    
-    // File I/O tracking
-    UINT bytes_written;
-    UINT bytes_read;
-    
-    // SD Card Information
-    DWORD free_clusters;
-    uint32_t total_space_kb;
-    uint32_t free_space_kb;
+   
     
     // Hardware Handles (to be passed in during initialization)
     UART_HandleTypeDef *uart_handle;
@@ -73,7 +57,7 @@ LogStatus check_sd_card_status(SD_Card_Logger *logger);
 
 // Utility functions
 void send_uart_message(SD_Card_Logger *logger, const char *message);
-void clear_log_buffer(SD_Card_Logger *logger);
+void clear_log_buffer();
 uint32_t get_buffer_size(const char *buf);
 LogStatus check_sd_card_status(SD_Card_Logger *logger);
 

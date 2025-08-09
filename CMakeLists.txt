@@ -13,6 +13,8 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS ON)
 
 
+
+
 # Define the build type
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
@@ -21,8 +23,6 @@ endif()
 # Set the project name
 set(CMAKE_PROJECT_NAME BME280SensorLog)
 
-# Include toolchain file
-include("cmake/gcc-arm-none-eabi.cmake")
 
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)

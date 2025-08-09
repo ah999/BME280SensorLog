@@ -82,8 +82,8 @@ DSTATUS USER_initialize (
 )
 {
   /* USER CODE BEGIN INIT */
-    Stat = STA_NOINIT;
-    return Stat;
+    	return SD_disk_initialize (pdrv);
+
   /* USER CODE END INIT */
 }
 
